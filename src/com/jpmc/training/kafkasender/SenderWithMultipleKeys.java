@@ -21,7 +21,7 @@ public class SenderWithMultipleKeys {
 		KafkaProducer<String, String> producer=new KafkaProducer<>(props);
 		
 		for(int i=1001;i<=1010;i++) {
-			ProducerRecord<String, String> record=new ProducerRecord<String, String>("test-topic", "key-1","This is a test mesage "+i);
+			ProducerRecord<String, String> record=new ProducerRecord<String, String>("test-topic-v", "key-1","This is a test mesage "+i);
 			producer.send(record);
 		}
 		
